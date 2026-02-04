@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "직방 데이터 스크래퍼",
+  "version": "1.0",
+  "description": "직방 웹사이트에서 데이터를 수집하여 CSV 파일로 저장합니다.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "*://*.zigbang.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
