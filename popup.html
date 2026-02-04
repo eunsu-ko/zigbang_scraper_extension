@@ -5,23 +5,75 @@
   <meta charset="UTF-8">
   <style>
     body {
-      font-family: sans-serif;
-      width: 200px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 250px;
+      padding: 0;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+    .container {
+      padding: 15px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       text-align: center;
-      padding: 10px;
+    }
+    h3 {
+      color: #333;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 18px;
     }
     button {
       width: 100%;
-      padding: 10px;
-      font-size: 14px;
+      padding: 10px 15px;
+      font-size: 15px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    #status {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+      min-height: 20px; /* To prevent layout shift */
+      word-break: keep-all; /* Prevent breaking Korean words */
+    }
+    .footer {
+      margin-top: 15px;
+      font-size: 11px;
+      color: #888;
+      text-align: center;
+    }
+    .footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h3>직방 데이터 스크래퍼</h3>
-  <button id="startScraping">데이터 수집 시작</button>
-  <div id="status" style="margin-top: 10px;"></div>
+  <div class="container">
+    <h3>직방 데이터 스크래퍼</h3>
+    <button id="startScraping">데이터 수집 시작</button>
+    <div id="status"></div>
+    <div class="footer">
+      <a href="https://github.com/eunsu-ko/zigbang_scraper_extension" target="_blank">GitHub Repository</a>
+    </div>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>
